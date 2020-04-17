@@ -15,14 +15,14 @@ namespace Advanced_Mandatory.Interfaces
         int PositionY { get; }
 
         /// <summary>
-        /// All creatures have a base health, starts at 100
+        /// All creatures have a base health, starts at 50
         /// </summary>
-        int Health { get; }
+        int Health { get; set; }
 
         /// <summary>
-        /// All creatures have a base damage, starts at 20
+        /// All creatures have a base damage, starts at 10
         /// </summary>
-        int Damage { get; }
+        int Damage { get; set; }
 
         /// <summary>
         /// All creatures have a name, doesn't have to be unique

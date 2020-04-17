@@ -18,11 +18,13 @@ namespace Advanced_Mandatory.Models.Entities.NPC
         public override int Health
         {
             get { return 50; }
+            set { }
         }
 
         public override int Damage
         {
             get { return 10; }
+            set { }
         }
 
         public override string Name
@@ -32,7 +34,10 @@ namespace Advanced_Mandatory.Models.Entities.NPC
 
         public override bool IsDead
         {
-            get { return false; }
+            get
+            {
+                return (Health <= 0);
+            }
         }
 
         public override ArmourMaterial Armour
@@ -49,5 +54,6 @@ namespace Advanced_Mandatory.Models.Entities.NPC
         {
             get { return h.RandomDirection(); }
         }
+
     }
 }

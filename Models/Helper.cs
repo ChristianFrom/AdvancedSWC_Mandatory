@@ -1,5 +1,6 @@
 ﻿using System;
 using Advanced_Mandatory.Enums;
+using Advanced_Mandatory.Interfaces;
 
 namespace Advanced_Mandatory.Models
 {
@@ -19,5 +20,6 @@ namespace Advanced_Mandatory.Models
             Direction d = (Direction)direction.GetValue(r.Next(0, direction.Length));
             return d;
         }
+
     }
 }

@@ -1,5 +1,8 @@
-﻿using Advanced_Mandatory.Enums;
+﻿using System;
+using System.Diagnostics.Contracts;
+using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Interfaces;
+using Advanced_Mandatory.Models.GameObjects.Armour;
 
 namespace Advanced_Mandatory.Models.Entities.NPC
 {
@@ -7,8 +10,8 @@ namespace Advanced_Mandatory.Models.Entities.NPC
     {
         public abstract int PositionX { get; }
         public abstract int PositionY { get; }
-        public abstract int Health { get; }
-        public abstract int Damage { get; }
+        public abstract int Health { get; set; }
+        public abstract int Damage { get; set; }
         public abstract string Name { get; }
         public abstract bool IsDead { get; }
         public abstract ArmourMaterial Armour { get; }
@@ -17,6 +20,7 @@ namespace Advanced_Mandatory.Models.Entities.NPC
 
         public Helper h = new Helper();
 
+        
 
         public override string ToString()
         {
