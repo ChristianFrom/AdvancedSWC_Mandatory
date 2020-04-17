@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Advanced_Mandatory.Enums;
+﻿using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Interfaces;
 
 namespace Advanced_Mandatory.Models.Entities.NPC

@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Advanced_Mandatory.Interfaces;
 using Advanced_Mandatory.Models.Entities.NPC;
 
