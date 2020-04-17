@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Advanced_Mandatory.Enums;
 
 namespace Advanced_Mandatory.Interfaces
 {
-    public interface IGameObject
-    {   
-        int PositionX { get; set; }
-        int PositionY { get; set; }
+    public interface IWeaponFactory
+    {
+        IWeapon Create(WeaponType type);
     }
 }

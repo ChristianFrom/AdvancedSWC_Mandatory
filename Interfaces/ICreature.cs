@@ -1,21 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Advanced_Mandatory.Enums;
+﻿using Advanced_Mandatory.Enums;
 
 namespace Advanced_Mandatory.Interfaces
 {
     public interface ICreature
     {
-        int PositionX { get; set; }
-        int PositionY { get; set; }
-        int Health { get; set; }
-        int Damage { get; set; }
-        string Name { get; set; }
-        bool IsDead { get; set; }
-        ArmourMaterial Armour { get; set; }
-        WeaponType Weapon { get; set; }
-        Direction DirectionToMove { get; set; }
-        
+        /// <summary>
+        /// All creatures have a X position in the world
+        /// </summary>
+        int PositionX { get; }
+
+        /// <summary>
+        /// All creatures have a Y position in the world
+        /// </summary>
+        int PositionY { get; }
+
+        /// <summary>
+        /// All creatures have a base health, starts at 100
+        /// </summary>
+        int Health { get; }
+
+        /// <summary>
+        /// All creatures have a base damage, starts at 20
+        /// </summary>
+        int Damage { get; }
+
+        /// <summary>
+        /// All creatures have a name, doesn't have to be unique
+        /// </summary>
+        string Name { get; }
+
+        /// <summary>
+        /// Boolean to indicate if a creature is dead.
+        /// </summary>
+        bool IsDead { get; }
+
+        /// <summary>
+        /// Indicates which armour material they are equipped with, can be cloth, leather or plate
+        /// </summary>
+        ArmourMaterial Armour { get; }
+
+        /// <summary>
+        /// Indicates which weapon type they are attacking with, can be magic, melee or range
+        /// </summary>
+        WeaponType Weapon { get; }
+
+        /// <summary>
+        /// Indicates which direction the creature moves
+        /// </summary>
+        Direction DirectionToMove { get; }
     }
 }
