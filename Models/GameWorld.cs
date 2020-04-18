@@ -55,7 +55,6 @@ namespace Advanced_Mandatory.Models
             for (int r = 0; r < WorldSize; r++)
             {
                 Console.WriteLine($"|{GetRowString(r)}|");
-               //Console.WriteLine($"|{PlaceCreatures(CreateCreatures(), r)}|");
             }
 
             Console.WriteLine(horizontalLine);
