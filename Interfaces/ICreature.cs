@@ -1,18 +1,15 @@
-﻿using Advanced_Mandatory.Enums;
+﻿using System.Numerics;
+using Advanced_Mandatory.Enums;
+using Advanced_Mandatory.Models;
 
 namespace Advanced_Mandatory.Interfaces
 {
     public interface ICreature
     {
         /// <summary>
-        /// All creatures have a X position in the world
+        /// Creature's position in the world
         /// </summary>
-        int PositionX { get; }
-
-        /// <summary>
-        /// All creatures have a Y position in the world
-        /// </summary>
-        int PositionY { get; }
+        Vector2 creaturePosition { get; set; }
 
         /// <summary>
         /// All creatures have a base health, starts at 50
@@ -32,7 +29,13 @@ namespace Advanced_Mandatory.Interfaces
         /// <summary>
         /// Boolean to indicate if a creature is dead.
         /// </summary>
-        bool IsDead { get; }
+        bool IsDead { get; set; }
+
+
+        /// <summary>
+        /// Indicates which char is used to represent the creature in the world
+        /// </summary>
+        char creatureChar { get; set; }
 
         /// <summary>
         /// Indicates which armour material they are equipped with, can be cloth, leather or plate
@@ -47,6 +50,8 @@ namespace Advanced_Mandatory.Interfaces
         /// <summary>
         /// Indicates which direction the creature moves
         /// </summary>
-        Direction DirectionToMove { get; }
+        Direction DirectionToMove { get; set; }
+
+        void Move(GameWorld world);
     }
 }

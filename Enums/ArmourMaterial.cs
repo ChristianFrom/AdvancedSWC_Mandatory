@@ -7,4 +7,6 @@ namespace Advanced_Mandatory.Enums
         LeatherArmour,
         PlateArmour
     }
+
+
 }

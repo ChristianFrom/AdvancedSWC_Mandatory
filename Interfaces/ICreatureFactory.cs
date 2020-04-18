@@ -1,9 +1,10 @@
-﻿using Advanced_Mandatory.Models.Entities.NPC;
+﻿using Advanced_Mandatory.Enums;
+using Advanced_Mandatory.Models.Entities.NPC;
 
 namespace Advanced_Mandatory.Interfaces
 {
     public interface ICreatureFactory
     {
-        CreatureBaseAbstract Create(CreatureBaseAbstract creature);
+        ICreature Create(Creatures creature);
     }
 }

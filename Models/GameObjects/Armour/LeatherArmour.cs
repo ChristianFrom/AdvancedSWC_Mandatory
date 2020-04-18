@@ -1,7 +1,7 @@
 ﻿
 namespace Advanced_Mandatory.Models.GameObjects.Armour
 {
-    class LeatherArmour : ArmourBaseAbstract
+    public class LeatherArmour : ArmourBaseAbstract
     {
         public override int PositionX
         {

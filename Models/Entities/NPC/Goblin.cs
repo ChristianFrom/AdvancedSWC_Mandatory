@@ -1,58 +1,21 @@
-﻿
+﻿using System.Numerics;
 using Advanced_Mandatory.Enums;
 
 namespace Advanced_Mandatory.Models.Entities.NPC
 {
     public class Goblin : CreatureBaseAbstract
     {
-        public override int PositionX
+        public Goblin() : base()
         {
-            get { return h.RandomPos(9);  }
-        }
-
-        public override int PositionY
-        {
-            get { return h.RandomPos(9); }
-        }
-
-        public override int Health
-        {
-            get { return 50; }
-            set { }
-        }
-
-        public override int Damage
-        {
-            get { return 10; }
-            set { }
-        }
-
-        public override string Name
-        {
-            get { return "Goblin";  }
-        }
-
-        public override bool IsDead
-        {
-            get
-            {
-                return (Health <= 0);
-            }
-        }
-
-        public override ArmourMaterial Armour
-        {
-            get { return ArmourMaterial.LeatherArmour; }
-        }
-
-        public override WeaponType Weapon
-        {
-            get { return WeaponType.Melee; }
-        }
-
-        public override Direction DirectionToMove
-        {
-            get { return h.RandomDirection(); }
+            creaturePosition = new Vector2(h.RandomPos(5), h.RandomPos(5));
+            Health = 50;
+            Name = "Goblin";
+            creatureChar = 'G';
+            IsDead = false;
+            Armour = ArmourMaterial.LeatherArmour;
+            Weapon = WeaponType.Melee;
+            Damage = 10;
+            DirectionToMove = Direction.Up;
         }
 
     }

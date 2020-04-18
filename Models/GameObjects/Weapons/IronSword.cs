@@ -1,4 +1,6 @@
 ﻿
+using Advanced_Mandatory.Models.Entities.NPC;
+
 namespace Advanced_Mandatory.Models.GameObjects.Weapons
 {
     public class IronSword : WeaponBaseAbstract
