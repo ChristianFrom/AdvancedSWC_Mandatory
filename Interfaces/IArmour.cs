@@ -1,19 +1,12 @@
 ﻿
+using System.Numerics;
+
 namespace Advanced_Mandatory.Interfaces
 
 {
     public interface IArmour
     {
-        /// <summary>
-        /// Every armour has a X position in the world
-        /// </summary>
-        int PositionX { get; }
-
-        /// <summary>
-        /// Every armour has a Y position in the world
-        /// </summary>
-        /// 
-        int PositionY { get; }
+        Vector2 WorldPosition { get; set; }
 
         /// <summary>
         /// Every armour has a name

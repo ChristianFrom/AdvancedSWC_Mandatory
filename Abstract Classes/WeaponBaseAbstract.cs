@@ -1,11 +1,11 @@
-﻿using Advanced_Mandatory.Interfaces;
+﻿using System.Numerics;
+using Advanced_Mandatory.Interfaces;
 
 namespace Advanced_Mandatory.Models.GameObjects.Weapons
 {
     public abstract class WeaponBaseAbstract : IWeapon
     {
-        public abstract int PositionX { get; }
-        public abstract int PositionY { get; }
+        public Vector2 WorldPosition { get { return new Vector2(h.RandomPos(9), h.RandomPos(9)); } set { } }
         public abstract string Name { get; }
         public abstract int DamageStat { get; }
 
@@ -13,7 +13,7 @@ namespace Advanced_Mandatory.Models.GameObjects.Weapons
 
         public override string ToString()
         {
-            return $"{nameof(PositionX)}: {PositionX}, {nameof(PositionY)}: {PositionY}, {nameof(Name)}: {Name}, {nameof(DamageStat)}: {DamageStat}";
+            return $"{nameof(WorldPosition)}: {WorldPosition}, {nameof(Name)}: {Name}, {nameof(DamageStat)}: {DamageStat}";
         }
     }
 }

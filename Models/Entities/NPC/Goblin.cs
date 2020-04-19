@@ -7,7 +7,7 @@ namespace Advanced_Mandatory.Models.Entities.NPC
     {
         public Goblin() : base()
         {
-            creaturePosition = new Vector2(h.RandomPos(5), h.RandomPos(5));
+            WorldPosition = new Vector2(h.RandomPos(5), h.RandomPos(5));
             Health = 50;
             Name = "Goblin";
             creatureChar = 'G';

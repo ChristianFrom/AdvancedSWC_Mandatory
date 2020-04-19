@@ -9,7 +9,7 @@ namespace Advanced_Mandatory.Interfaces
         /// <summary>
         /// Creature's position in the world
         /// </summary>
-        Vector2 creaturePosition { get; set; }
+        Vector2 WorldPosition { get; set; }
 
         /// <summary>
         /// All creatures have a base health, starts at 50
@@ -53,5 +53,7 @@ namespace Advanced_Mandatory.Interfaces
         Direction DirectionToMove { get; set; }
 
         void Move(GameWorld world);
+
+        void Attack(ICreature a, ICreature b);
     }
 }

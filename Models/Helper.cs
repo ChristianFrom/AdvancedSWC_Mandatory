@@ -30,35 +30,12 @@ namespace Advanced_Mandatory.Models
             int x = r.Next(1, 2);
             int y = r.Next(1, 2);
 
-            c.creaturePosition = new Vector2(x, y);
+            c.WorldPosition = new Vector2(x, y);
 
             //world.OnWorldChanged(EventArgs.Empty);
             return true;
         }
 
-        public void Attack(ICreature a, ICreature b)
-        {
-            IState damageState = new DamageStateHealthy();
-
-                if (a.Health < 25)
-                {
-                    damageState = new DamageStateWounded();
-                    damageState.CalculateDamage(a, b);
-                }
-
-                else if (a.Health > 25)
-                {
-                damageState = new DamageStateHealthy();
-                resetDamage(a);
-                damageState.CalculateDamage(a, b);
-                }
-
-        }
-
-
-        public void resetDamage(ICreature a)
-        {
-            a.Damage = 10;
-        }
+        
     }
 }

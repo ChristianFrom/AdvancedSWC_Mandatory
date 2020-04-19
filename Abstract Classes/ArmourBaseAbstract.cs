@@ -1,4 +1,5 @@
-﻿using Advanced_Mandatory.Interfaces;
+﻿using System.Numerics;
+using Advanced_Mandatory.Interfaces;
 
 namespace Advanced_Mandatory.Models.GameObjects.Armour
 {
@@ -7,8 +8,7 @@ namespace Advanced_Mandatory.Models.GameObjects.Armour
     /// </summary>
     public abstract class ArmourBaseAbstract : IArmour
     {
-        public abstract int PositionX { get; }
-        public abstract int PositionY { get; }
+        public Vector2 WorldPosition { get {return new Vector2(h.RandomPos(9), h.RandomPos(9));} set{ } }
         public abstract string Name { get; }
         public abstract int DefenceStat { get; }
 
@@ -16,7 +16,7 @@ namespace Advanced_Mandatory.Models.GameObjects.Armour
 
         public override string ToString()
         {
-            return $"{nameof(PositionX)}: {PositionX}, {nameof(PositionY)}: {PositionY}, {nameof(Name)}: {Name}, {nameof(DefenceStat)}: {DefenceStat}";
+            return $"{nameof(WorldPosition)}: {WorldPosition}, {nameof(Name)}: {Name}, {nameof(DefenceStat)}: {DefenceStat}";
         }
     }
 }
