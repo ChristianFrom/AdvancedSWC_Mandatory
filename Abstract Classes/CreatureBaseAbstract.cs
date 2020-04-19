@@ -29,7 +29,12 @@ namespace Advanced_Mandatory.Models.Entities.NPC
             Console.WriteLine("new position: " + WorldPosition);
         }
 
-        public void Attack(ICreature a, ICreature b)
+        public void ReactOnItem()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Attack(CreatureBaseAbstract a, CreatureBaseAbstract b)
         {
             IState damageState = new DamageStateHealthy();
 
@@ -52,6 +57,8 @@ namespace Advanced_Mandatory.Models.Entities.NPC
         {
             a.Damage = 10;
         }
+
+        
 
         public override string ToString()
         {

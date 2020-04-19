@@ -1,6 +1,7 @@
 ﻿using System.Numerics;
 using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Models;
+using Advanced_Mandatory.Models.Entities.NPC;
 
 namespace Advanced_Mandatory.Interfaces
 {
@@ -31,7 +32,6 @@ namespace Advanced_Mandatory.Interfaces
         /// </summary>
         bool IsDead { get; set; }
 
-
         /// <summary>
         /// Indicates which char is used to represent the creature in the world
         /// </summary>
@@ -54,6 +54,8 @@ namespace Advanced_Mandatory.Interfaces
 
         void Move(GameWorld world);
 
-        void Attack(ICreature a, ICreature b);
+        void Attack(CreatureBaseAbstract a, CreatureBaseAbstract b);
+
+        void ReactOnItem();
     }
 }

@@ -14,6 +14,9 @@ namespace Advanced_Mandatory.Abstract_Classes
 
         Helper h = new Helper();
 
+
+        public abstract void UseObject();
+
         public override string ToString()
         {
             return $"{nameof(WorldPosition)}: {WorldPosition}, {nameof(Name)}: {Name}";
