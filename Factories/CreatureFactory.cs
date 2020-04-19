@@ -10,6 +10,8 @@ namespace Advanced_Mandatory.Factories
         public CreatureBaseAbstract Create(Creatures creature)
         {
             if (creature == Creatures.Goblin) return new Goblin();
+            if (creature == Creatures.Orc) return new Orc();
+            if (creature == Creatures.Elf) return new Elf();
 
             throw new ArgumentException($"CreatureFactory - no creature available with that this name {creature}");
         }

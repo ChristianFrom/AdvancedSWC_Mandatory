@@ -16,14 +16,7 @@ namespace Advanced_Mandatory.Models
             return i;
         }
 
-        public Direction RandomDirection()
-        {
-            Random r = new Random();
-            Array direction = Enum.GetValues(typeof(Direction));
-            Direction d = (Direction)direction.GetValue(r.Next(0, direction.Length));
-            return d;
-        }
-
+        
         public bool MoveRandomly(ICreature c, GameWorld world)
         {
             Random r = new Random();

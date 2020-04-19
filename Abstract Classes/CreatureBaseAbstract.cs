@@ -17,10 +17,9 @@ namespace Advanced_Mandatory.Models.Entities.NPC
         public char creatureChar { get; set; }
         public ArmourMaterial Armour { get; set; }
         public WeaponType Weapon { get; set; }
-        public Direction DirectionToMove { get; set; }
+        public Direction DirectionToMove { get { return DirectionToMove;} set { } }
 
         public Helper h = new Helper();
-
 
         public void Move(GameWorld world)
         {
@@ -58,7 +57,13 @@ namespace Advanced_Mandatory.Models.Entities.NPC
             a.Damage = 10;
         }
 
-        
+        public Direction RandomDirection()
+        {
+            Random r = new Random();
+            Array direction = Enum.GetValues(typeof(Direction));
+            Direction d = (Direction)direction.GetValue(r.Next(0, direction.Length));
+            return d;
+        }
 
         public override string ToString()
         {

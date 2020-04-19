@@ -5,16 +5,15 @@ namespace Advanced_Mandatory.Models.Entities.NPC
 {
     public class Goblin : CreatureBaseAbstract
     {
-        public Goblin() : base()
+        public Goblin()
         {
             Health = 50;
             Name = "Goblin";
             creatureChar = 'G';
             IsDead = false;
             Armour = ArmourMaterial.LeatherArmour;
-            Weapon = WeaponType.Melee;
+            Weapon = WeaponType.Ranged;
             Damage = 10;
-            DirectionToMove = Direction.Up;
         }
 
     }
