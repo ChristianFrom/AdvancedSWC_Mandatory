@@ -25,6 +25,7 @@ namespace Advanced_Mandatory.Models.GameObjects.WorldObjects
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine(c.Name + " has been healed by 25");
                 Console.ResetColor();
+                isUsed = true;
             }
             else
             {

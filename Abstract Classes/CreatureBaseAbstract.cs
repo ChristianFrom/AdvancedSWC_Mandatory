@@ -54,7 +54,7 @@ namespace Advanced_Mandatory.Models.Entities.NPC
 
         public void ReactOnCreature(CreatureBaseAbstract c)
         {
-            if (c.WorldPosition == WorldPosition)
+            if (c.WorldPosition == WorldPosition && Name != c.Name)
             {
                 Attack(this, c);
             }

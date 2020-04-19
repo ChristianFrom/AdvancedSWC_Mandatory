@@ -12,9 +12,9 @@ namespace Advanced_Mandatory.Abstract_Classes
     {
         public Vector2 WorldPosition { get { return new Vector2(h.RandomPos(9), h.RandomPos(9)); } set { } }
         public abstract string Name { get; set; }
+        public bool isUsed { get; set; }
 
         Helper h = new Helper();
-
 
         public abstract void UseObject(CreatureBaseAbstract c);
 

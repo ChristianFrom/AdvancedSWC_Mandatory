@@ -20,6 +20,7 @@ namespace Advanced_Mandatory.Models.GameObjects.WorldObjects
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(c.Name + " has stepped on some spikes and got hit with 10 damage!");
             Console.ResetColor();
+            isUsed = true;
         }
     }
 }

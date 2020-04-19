@@ -10,6 +10,7 @@ namespace Advanced_Mandatory.Interfaces
     {
          Vector2 WorldPosition { get; set; }
          string Name { get; set; }
+         bool isUsed { get; set; }
          void UseObject(CreatureBaseAbstract c);
     }
 }

@@ -18,6 +18,8 @@ namespace Advanced_Mandatory.Models
         public String horizontalLine = "-";
         public List<CreatureBaseAbstract> creatures = new List<CreatureBaseAbstract>();
         public List<WorldObjectBaseAbstract> worldObjects = new List<WorldObjectBaseAbstract>();
+        public List<CreatureBaseAbstract> deadCreatures = new List<CreatureBaseAbstract>();
+        public List<WorldObjectBaseAbstract> usedWorldObjects = new List<WorldObjectBaseAbstract>();
         public CreatureFactory cF = new CreatureFactory();
         public WorldObjectFactory oF = new WorldObjectFactory();
 
@@ -28,9 +30,10 @@ namespace Advanced_Mandatory.Models
             World = new char[worldSize, worldSize];
 
             CreateCreatures(3);
-            CreateWorldObjects(4);
+            CreateWorldObjects(2);
 
         }
+
 
 
         public List<CreatureBaseAbstract> CreateCreatures(int numberofCreatures)
