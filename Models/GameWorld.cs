@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using Advanced_Mandatory.Abstract_Classes;
 using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Factories;
 using Advanced_Mandatory.Interfaces;
@@ -16,7 +17,9 @@ namespace Advanced_Mandatory.Models
         public int WorldSize;
         public String horizontalLine = "-";
         public List<CreatureBaseAbstract> creatures = new List<CreatureBaseAbstract>();
+        public List<WorldObjectBaseAbstract> worldObjects = new List<WorldObjectBaseAbstract>();
         public CreatureFactory cF = new CreatureFactory();
+        public WorldObjectFactory oF = new WorldObjectFactory();
 
         public GameWorld(int worldSize)
         {
@@ -24,31 +27,37 @@ namespace Advanced_Mandatory.Models
             WorldSize = worldSize;
             World = new char[worldSize, worldSize];
 
-            for (int i = 0; i < worldSize + 2; i++)
-            {
-                horizontalLine += "-";
-            }
+            CreateCreatures(3);
+            CreateWorldObjects(4);
+
         }
 
 
-        public List<CreatureBaseAbstract> CreateCreatures()
+        public List<CreatureBaseAbstract> CreateCreatures(int numberofCreatures)
         {
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i <= numberofCreatures; i++)
             {
+                // Make random creatures?
                 creatures.Add(cF.Create(Creatures.Goblin));
+                creatures.Add(cF.Create(Creatures.Orc));
+                creatures.Add(cF.Create(Creatures.Elf));
             }
 
             return creatures;
         }
 
-        public void MoveCreatures(GameWorld world)
+        public List<WorldObjectBaseAbstract> CreateWorldObjects(int numberOfObjects)
         {
-            foreach (var c in creatures)
+            for (int i = 0; i <= numberOfObjects; i++)
             {
-                c.Move(world);
+                // Make random objects?
+                worldObjects.Add(oF.Create(WorldObjects.HealthPotion));
+                worldObjects.Add(oF.Create(WorldObjects.Spikes));
             }
-        }
 
+            return worldObjects;
+        }
+        
        
         public void DrawWorld()
         {

@@ -1,4 +1,5 @@
 ﻿using System.Numerics;
+using Advanced_Mandatory.Abstract_Classes;
 using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Models;
 using Advanced_Mandatory.Models.Entities.NPC;
@@ -11,6 +12,9 @@ namespace Advanced_Mandatory.Interfaces
         /// Creature's position in the world
         /// </summary>
         Vector2 WorldPosition { get; set; }
+
+
+        int BaseHealth { get; set; }
 
         /// <summary>
         /// All creatures have a base health, starts at 50
@@ -52,10 +56,14 @@ namespace Advanced_Mandatory.Interfaces
         /// </summary>
         Direction DirectionToMove { get; set; }
 
-        void Move(GameWorld world);
+        void MoveRandomly();
+
+        bool CheckIfDead();
 
         void Attack(CreatureBaseAbstract a, CreatureBaseAbstract b);
 
-        void ReactOnItem();
+        void ReactOnItem(WorldObjectBaseAbstract o);
+
+        void ReactOnCreature(CreatureBaseAbstract c);
     }
 }

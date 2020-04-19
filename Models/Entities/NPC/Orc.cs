@@ -9,7 +9,8 @@ namespace Advanced_Mandatory.Models.Entities.NPC
     {
         public Orc()
         {
-            Health = 75;
+            BaseHealth = 75;
+            Health = 50;
             Name = "Orc";
             creatureChar = 'O';
             IsDead = false;

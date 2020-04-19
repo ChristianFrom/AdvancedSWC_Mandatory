@@ -9,7 +9,8 @@ namespace Advanced_Mandatory.Models.Entities.NPC
     {
         public Elf()
         {
-            Health = 65;
+            BaseHealth = 65;
+            Health = 50;
             Name = "Elf";
             creatureChar = 'E';
             IsDead = false;

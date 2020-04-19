@@ -16,19 +16,5 @@ namespace Advanced_Mandatory.Models
             return i;
         }
 
-        
-        public bool MoveRandomly(ICreature c, GameWorld world)
-        {
-            Random r = new Random();
-            int x = r.Next(1, 2);
-            int y = r.Next(1, 2);
-
-            c.WorldPosition = new Vector2(x, y);
-
-            //world.OnWorldChanged(EventArgs.Empty);
-            return true;
-        }
-
-        
     }
 }

@@ -19,10 +19,18 @@ namespace Advanced_Mandatory.Models.GameObjects.WorldObjects
 
         public override void UseObject(CreatureBaseAbstract c)
         {
-            c.Health += 25;
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(c.Name + " has been healed by 25");
-            Console.ResetColor();
+            if (c.Health < c.BaseHealth)
+            {
+                c.Health += 25;
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(c.Name + " has been healed by 25");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.WriteLine(c.Name + " already has full health!");
+            }
+            
         }
     }
 }

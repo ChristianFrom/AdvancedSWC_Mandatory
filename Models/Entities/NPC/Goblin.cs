@@ -7,6 +7,7 @@ namespace Advanced_Mandatory.Models.Entities.NPC
     {
         public Goblin()
         {
+            BaseHealth = 50;
             Health = 50;
             Name = "Goblin";
             creatureChar = 'G';
