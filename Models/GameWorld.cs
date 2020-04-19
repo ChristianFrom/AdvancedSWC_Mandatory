@@ -5,6 +5,8 @@ using System.Text;
 using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Factories;
 using Advanced_Mandatory.Interfaces;
+using Advanced_Mandatory.Models.Entities.NPC;
+
 namespace Advanced_Mandatory.Models
 {
     public class GameWorld
@@ -13,7 +15,7 @@ namespace Advanced_Mandatory.Models
         public char[,] World;
         public int WorldSize;
         public String horizontalLine = "-";
-        public List<ICreature> creatures = new List<ICreature>();
+        public List<CreatureBaseAbstract> creatures = new List<CreatureBaseAbstract>();
         public CreatureFactory cF = new CreatureFactory();
 
         public GameWorld(int worldSize)
@@ -29,7 +31,7 @@ namespace Advanced_Mandatory.Models
         }
 
 
-        public List<ICreature> CreateCreatures()
+        public List<CreatureBaseAbstract> CreateCreatures()
         {
             for (int i = 0; i < 4; i++)
             {

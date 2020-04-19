@@ -1,10 +1,11 @@
 ﻿
 using Advanced_Mandatory.Enums;
+using Advanced_Mandatory.Models.GameObjects.Weapons;
 
 namespace Advanced_Mandatory.Interfaces
 {
     public interface IWeaponFactory
     {
-        IWeapon Create(WeaponType type);
+        WeaponBaseAbstract Create(WeaponType type);
     }
 }

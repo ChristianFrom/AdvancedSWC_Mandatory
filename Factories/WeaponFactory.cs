@@ -7,7 +7,7 @@ namespace Advanced_Mandatory.Factories
 {
     public class WeaponFactory : IWeaponFactory
     {
-        public IWeapon Create(WeaponType type)
+        public WeaponBaseAbstract Create(WeaponType type)
         {
             if (type == WeaponType.Melee) return new IronSword();
             if (type == WeaponType.Magic) return new MagicStaff();

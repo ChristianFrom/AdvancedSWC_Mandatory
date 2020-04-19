@@ -1,9 +1,10 @@
 ﻿using Advanced_Mandatory.Enums;
+using Advanced_Mandatory.Models.GameObjects.Armour;
 
 namespace Advanced_Mandatory.Interfaces
 {
     public interface IArmourFactory
     {
-        IArmour Create(ArmourMaterial material);
+        ArmourBaseAbstract Create(ArmourMaterial material);
     }
 }

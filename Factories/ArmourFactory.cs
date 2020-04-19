@@ -2,12 +2,13 @@
 using Advanced_Mandatory.Enums;
 using Advanced_Mandatory.Interfaces;
 using Advanced_Mandatory.Models.GameObjects.Armour;
+using Advanced_Mandatory.Models.GameObjects.Weapons;
 
 namespace Advanced_Mandatory.Factories
 {
     public class ArmourFactory : IArmourFactory
     {
-        public IArmour Create(ArmourMaterial material)
+        public ArmourBaseAbstract Create(ArmourMaterial material)
         {
             if (material == ArmourMaterial.ClothArmour) return new ClothRobes();
             if (material == ArmourMaterial.LeatherArmour) return new LeatherArmour();

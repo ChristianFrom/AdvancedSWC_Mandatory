@@ -7,7 +7,7 @@ namespace Advanced_Mandatory.Factories
 {
     public class CreatureFactory : ICreatureFactory
     {
-        public ICreature Create(Creatures creature)
+        public CreatureBaseAbstract Create(Creatures creature)
         {
             if (creature == Creatures.Goblin) return new Goblin();
 

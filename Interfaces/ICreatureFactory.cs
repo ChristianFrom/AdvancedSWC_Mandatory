@@ -5,6 +5,6 @@ namespace Advanced_Mandatory.Interfaces
 {
     public interface ICreatureFactory
     {
-        ICreature Create(Creatures creature);
+        CreatureBaseAbstract Create(Creatures creature);
     }
 }
