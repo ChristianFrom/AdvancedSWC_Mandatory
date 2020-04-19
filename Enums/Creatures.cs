@@ -8,6 +8,6 @@ namespace Advanced_Mandatory.Enums
     {
         Goblin,
         Orc,
-        GiantRat
+        Elf
     }
 }

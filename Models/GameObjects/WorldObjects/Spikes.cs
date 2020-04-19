@@ -6,22 +6,19 @@ using Advanced_Mandatory.Models.Entities.NPC;
 
 namespace Advanced_Mandatory.Models.GameObjects.WorldObjects
 {
-    public class HealthPotion : WorldObjectBaseAbstract
+    public class Spikes : WorldObjectBaseAbstract
     {
         public override string Name { get; set; }
 
-
-        public HealthPotion()
-        { 
-            Name = "Health Potion";
+        public Spikes()
+        {
+            Name = "Spikes";
         }
-
-
         public override void UseObject(CreatureBaseAbstract c)
         {
-            c.Health += 25;
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine(c.Name + " has been healed by 25");
+            c.Health -= 10;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine(c.Name + " has stepped on some spikes and got hit with 10 damage!");
             Console.ResetColor();
         }
     }

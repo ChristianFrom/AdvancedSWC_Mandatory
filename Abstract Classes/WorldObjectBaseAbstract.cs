@@ -4,6 +4,7 @@ using System.Numerics;
 using System.Text;
 using Advanced_Mandatory.Interfaces;
 using Advanced_Mandatory.Models;
+using Advanced_Mandatory.Models.Entities.NPC;
 
 namespace Advanced_Mandatory.Abstract_Classes
 {
@@ -15,7 +16,7 @@ namespace Advanced_Mandatory.Abstract_Classes
         Helper h = new Helper();
 
 
-        public abstract void UseObject();
+        public abstract void UseObject(CreatureBaseAbstract c);
 
         public override string ToString()
         {

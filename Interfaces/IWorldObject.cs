@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Numerics;
 using System.Text;
+using Advanced_Mandatory.Models.Entities.NPC;
 
 namespace Advanced_Mandatory.Interfaces
 {
@@ -9,6 +10,6 @@ namespace Advanced_Mandatory.Interfaces
     {
          Vector2 WorldPosition { get; set; }
          string Name { get; set; }
-         void UseObject();
+         void UseObject(CreatureBaseAbstract c);
     }
 }
