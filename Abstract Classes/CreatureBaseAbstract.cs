@@ -57,6 +57,7 @@ namespace Advanced_Mandatory.Models.Entities.NPC
             if (c.WorldPosition == WorldPosition && Name != c.Name)
             {
                 Attack(this, c);
+                MoveRandomly();
             }
         }
 
@@ -68,12 +69,15 @@ namespace Advanced_Mandatory.Models.Entities.NPC
 
             if (a.Health < 25)
             {
+                b.CheckIfDead();
                 damageState = new DamageStateWounded();
                 damageState.CalculateDamage(a, b);
+                resetDamage(a);
             }
 
             else if (a.Health > 25)
             {
+                b.CheckIfDead();
                 damageState = new DamageStateHealthy();
                 resetDamage(a);
                 damageState.CalculateDamage(a, b);

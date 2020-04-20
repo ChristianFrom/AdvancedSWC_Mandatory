@@ -10,12 +10,10 @@ namespace Advanced_Mandatory.Models.GameObjects.WorldObjects
     {
         public override string Name { get; set; }
 
-
         public HealthPotion()
         { 
             Name = "Health Potion";
         }
-
 
         public override void UseObject(CreatureBaseAbstract c)
         {

@@ -14,6 +14,10 @@ namespace Advanced_Mandatory.States
                 int newHealth = dC.Health -= aC.Damage;
                 dC.Health = newHealth;
             }
+            else if (aC.Damage >= dC.Health)
+            {
+                dC.IsDead = true;
+            }
         }
     }
 }
